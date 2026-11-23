@@ -1,0 +1,12 @@
+<form action="/login" method="POST">
+  <h1>Log in</h1>
+  <%- include("field", { name: "username", label: "Username", type: "text", placeholder: "Username" }) %>
+  <%- include("field", { name: "password", label: "Password", type: "password", placeholder: "Password" }) %>
+
+  <% if (errors.msg) { %>
+  <small class="error-message"> <%= errors.msg %></small>
+  <% } %>
+
+  <button type="submit">Log in</button>
+  <small>Don't have an account yet? <a href="/sign-up">Sign up</a></small>
+</form>

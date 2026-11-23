@@ -1,0 +1,11 @@
+<form action="/become-admin" method="post">
+  <h3>Are you an admin?</h3>
+  <small>Enter the admin password to upgrade your rights</small>
+  <div class="pw-input">
+    <%- include("field", { name: "admin_password", label: "Password", type: "password", placeholder: "Password" }) %>
+    <button type="submit">
+      <img src="/images/arrow-right-svgrepo-com.svg" alt="Right arrow">
+      <span class="sr-only">Submit</span>
+    </button>
+  </div>
+</form>

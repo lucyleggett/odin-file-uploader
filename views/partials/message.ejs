@@ -1,0 +1,33 @@
+<div class="message-wrapper">
+  <article class="liquid-glass">
+    <% if (locals.user?.member) { %>
+    <i class="fa-solid fa-circle-user"></i>
+    <% } %>
+
+    <div class="text-content">
+      <% if (locals.user?.member) { %>
+      <div class="message-meta">
+        <strong><%= username %></strong>
+        <small>
+          <%= new Date(date).toLocaleDateString('en-GB', {
+              year: 'numeric',
+              month: 'numeric',
+              day: 'numeric',
+              hour: '2-digit',
+              minute: '2-digit',
+            }) %>
+        </small>
+      </div>
+      <% } %>
+      <p><%= text %></p>
+    </div>
+  </article>
+  <% if (locals.user?.admin) { %>
+  <form action="/<%= id %>/delete" method="POST">
+    <button type="submit">
+      <img src="/images/trash-3-svgrepo-com.svg" alt="">
+      <span class="sr-only">Delete</span>
+    </button>
+  </form>
+  <% } %>
+</div>

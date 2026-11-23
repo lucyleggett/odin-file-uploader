@@ -1,0 +1,25 @@
+<nav>
+  <div class="logo">
+    <i class="fa-regular fa-comments"></i>
+    <h1>mmbr</h1>
+  </div>
+
+  <ul>
+    <% if (locals.user) { %>
+    <li class="wide-media">Welcome back, <strong><%= locals.user.username %></strong>!</li>
+    <li class="narrow-media"><strong><%= locals.user.username %></strong></li>
+    <li>
+      <a href="/log-out" aria-role="button" aria-label="Log out">
+        <img src="/images/log-out-01-svgrepo-com.svg" alt="Log out">
+      </a>
+    </li>
+
+    <% } else { %>
+    <li>
+      <a href="/login" aria-role="button" aria-label="Log in">
+        <img src="images/log-in-01-svgrepo-com.svg" alt="Log in">
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</nav>

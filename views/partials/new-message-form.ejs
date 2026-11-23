@@ -1,0 +1,13 @@
+<form action="/new-message" method="POST" id="new-msg-form">
+  <%- include('field', { 
+    name: 'message', 
+    label: 'Body', 
+    type: 'text', 
+    placeholder: 'Post message' 
+  }) %>
+
+  <button type="submit">
+    <img src="/images/enter-svgrepo-com.svg" alt="" aria-hidden="true">
+    <span class="sr-only">Send message</span>
+  </button>
+</form>

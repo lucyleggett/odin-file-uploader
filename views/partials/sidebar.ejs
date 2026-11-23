@@ -1,0 +1,8 @@
+<aside>
+  <% if (!user.member) { %>
+    <%- include("member-form.ejs") %>
+  <% } %>
+  <% if (!user.admin) { %>
+    <%- include("admin-form.ejs") %>
+  <% } %>
+</aside>

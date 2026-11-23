@@ -1,0 +1,7 @@
+<div class="couple">
+  <label for="<%= name %>" class="sr-only"><%= label %></label>
+  <input type="<%= type %>" name="<%= name %>" id="<%= name %>" placeholder="<%= placeholder %>" <% if (type !== "password") { %>value="<%= values[name] || '' %>" <% } %> <% if (errors[name]) { %>aria-invalid="true" aria-describedby="<%= name %>-error" <% } %> required>
+  <% if (errors[name]) { %>
+  <small class="error-message" id="<%= name %>-error"><%= errors[name].msg %></small>
+  <% } %>
+</div>

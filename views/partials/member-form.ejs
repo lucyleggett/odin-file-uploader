@@ -1,0 +1,12 @@
+<form action="/become-member" method="post">
+  <h3>Become a member to see who's posting</h3>
+  <small>Enter the secret members' password</small>
+  <div class="pw-input">
+    <%- include("field", { name: "member_password", label: "Member password", type: "password", placeholder: "Password" }) %>
+
+    <button type="submit">
+      <img src="/images/arrow-right-svgrepo-com.svg" alt="Right arrow">
+      <span class="sr-only">Submit</span>
+    </button>
+  </div>
+</form>
